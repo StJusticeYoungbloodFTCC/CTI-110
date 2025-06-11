@@ -25,7 +25,7 @@ print("\n\n", baseInt, "raised to the power of", expoInt, "is", sumExpo, "!!")
 # --- Header for Add and Sub ---
 print("\n\n-----Addition and Subtraction----\n\n")
 
-# -- Calculations , () in fullSum added for clarity. 
+# -- Calculations, () in fullSum added for clarity. 
 print("Enter a starting integer:", end=" ")
 startInt = int(input())
 print("Enter an inte1ger to add:", end=" ")
