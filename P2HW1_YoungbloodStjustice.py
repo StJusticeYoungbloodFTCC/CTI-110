@@ -32,7 +32,7 @@ print("\nLast, how much do you need for food?", end=" ")
 foodFlt = float(input())
 
 # Separation header
-
+ 
 # Display "------------Travel Expenses------------"
 print("\n------------Travel Expenses------------")
 
