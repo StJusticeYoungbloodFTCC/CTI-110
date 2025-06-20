@@ -1,7 +1,7 @@
 # St. Justice Youngblood
 # 6/11/25
 # P1HW2
-#(Travel expense calculator)
+# (Travel expense calculator)
 # Brief Desc: - {Calculates and displays travel expenses}
 # -[This program will prompt the user to enter their budget and travel destination.
 # -Along with how much they will spend on gas, food, and accommodations.
