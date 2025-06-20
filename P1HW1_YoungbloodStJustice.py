@@ -36,4 +36,3 @@ fullSum = (startInt + addInt) - subInt
  
 # - Final statement -
 print("\n\n", startInt, "+", addInt, "-", subInt, "is equal to", fullSum)
- 
