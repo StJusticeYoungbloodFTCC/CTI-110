@@ -4,7 +4,7 @@
 # This program will calculate and display travel expenses
 
 # - - Get user's  budget and expenses - -
-# Display "This program calculates and displays travel expenses"
+# Display "This program calculates and displays travel expenses."
 # Display "Enter Budget: "
 # Input budgetFlt
 print("This program calculates and displays travel expenses\n")
@@ -21,17 +21,17 @@ location = input(str())
 print("\nHow much do you think you will spend on gas?", end=" ")
 fuelFlt = float(input())
 
-# Display "Approximately, how much will you need for accomodation/hotel?"
-# Input accomodationFlt
+# Display "Approximately, how much will you need for accommodation/hotel?"
+# Input accommodationFlt
 print("\nApproximately, how much will you need for accomodation/hotel?", end=" ")
-accomodationFlt = float(input())
+accommodationFlt = float(input())
 
 # Display "Last, how much do you need for food?"
 # Input foodFlt
 print("\nLast, how much do you need for food?", end=" ")
 foodFlt = float(input())
 
-# Seperation header
+# Separation header
 
 # Display "------------Travel Expenses------------"
 print("\n------------Travel Expenses------------")
@@ -42,8 +42,8 @@ print(f'{"Location:":<20} {location}')
 print(f'{"Initial Budget:":<20} ${budgetFlt:.2f}')
 # Display "Fuel: ", fuelFlt
 print(f'{"Fuel:":<20} ${fuelFlt:.2f}')
-# Display "Accomodation: ", accomodationFlt
-print(f'{"Accomodation:":<20} ${accomodationFlt:.2f}')
+# Display "Accommodation: ", accommodationFlt
+print(f'{"Accommodation:":<20} ${accommodationFlt:.2f}')
 # Display "Food: " foodFlt
 print(f'{"Food:":<20} ${foodFlt:.2f}')
 
@@ -52,7 +52,7 @@ print("-----------------------------------------")
 # --Calculations--
 
 # Set expensesInt = fuelInt + accomodationInt + foodInt
-expensesFlt = fuelFlt + accomodationFlt + foodFlt
+expensesFlt = fuelFlt + accommodationFlt + foodFlt
 # Set budgetInt = budgetInt - expensesInt
 budgetFlt = budgetFlt - expensesFlt
 
