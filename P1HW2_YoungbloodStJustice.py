@@ -47,7 +47,7 @@ foodInt = int(input())
 # Display "------------Travel Expenses------------"
 print("\n------------Travel Expenses------------")
 
-# Display user's inputted info, calculate expenses, subtract from budget, and display remaining balance. 
+# Display the user's inputted info, calculate expenses, subtract from the budget, and display the remaining balance. 
 # Display "Location: ", location
 print("Location:", location)
 # Display "Initial Budget: ", budgetInt
