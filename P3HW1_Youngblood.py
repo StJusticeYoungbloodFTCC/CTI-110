@@ -2,7 +2,7 @@
 # 6/26/2025
 # P3HW1
 # CTI-110
-# Desc: This program takes a number grade , determines average and displays letter grade for average.
+# Desc: This program takes a number grade, determines the average, and displays the letter grade for the average.
 
 # Enter grades for six modules
 mod_1 = float(input('Enter grade for Module 1: '))
@@ -15,14 +15,14 @@ mod_6 = float(input('Enter grade for Module 6: '))
 # Add grades entered to a list
 grades = [mod_1, mod_2, mod_3, mod_4, mod_5, mod_6]
 
-# Determine lowest, highest , sum and average for grades
+# Determine the lowest, highest, sum, and average for grades
 
 low = min(grades)
 high = max(grades)
 sum = sum(grades)
 avg = sum / len(grades)
 
-# Determine letter grade for average
+# Determine the letter grade for the average
 
 print("\n------------Results------------")
 print(f'{"Lowest Grade:":<20} {low}')
