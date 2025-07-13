@@ -1,7 +1,7 @@
 # St. Justice Youngblood
 # 7/10/25 - 7/12/25
 # P5HW
-# Desc: This program will allow a user a character classes to fight a boss,
+# Desc: This program will allow a user to choose a character class to fight a boss,
 # along with being supported by two AI teammates. 
 
 import random
@@ -82,7 +82,7 @@ def classAttributes(userClass):
         "Status": "Alive"
     }
 
-    # Checks to see if user input is valid to check class
+    # Checks to see if user input is valid to check the class
     if userClass >= 0 and userClass <= 3:
         return
     
@@ -212,7 +212,7 @@ def classSelectStatement():
 
     return 
 def classSelect():
-    # Get user's input.
+    # Get the user's input.
     userClass = int(input("Enter your selection: "))
     print()
     if (userClass == 0):
@@ -378,14 +378,14 @@ def medicTurn(medic, boss, userChar, soldier):
     militaryStimShot = 20
     bandAid = 50
 
-    # Create a random roll for medic move
+    # Create a random roll for the medic move
     
     medicRoll = random.randint(1, 3)
     if medicRoll == 1:
         # Random choice for healing the team
         healDecision = random.randint(1, 2)
         if healDecision == 1:
-            # Chooses who to heal (using random number)
+            # Chooses who to heal (using a random number)
             if soldier["Status"] == "Alive":
 
                 medic["Health"] += bandAid
@@ -407,7 +407,7 @@ def medicTurn(medic, boss, userChar, soldier):
 
 
         elif healDecision == 2:
-            # Chooses who to heal, if both teammates are alive, the party is healed. (using random number)
+            # Chooses who to heal. If both teammates are alive, the party is healed. (using a random number)
             if userChar["Status"] == "Alive" and soldier["Status"] == "Alive":
             # If full party is alive
                 medic["Health"] += militaryStimShot
@@ -518,7 +518,7 @@ def bossLadderTurn(medic, boss, userChar, soldier):
     print(f"{name} stands menacingly.")
 
 
-    # Create a random roll for attack move
+    # Create a random roll for the attack move
     
     attackRoll = random.randint(1, 3)
     if attackRoll == 1:
@@ -529,7 +529,7 @@ def bossLadderTurn(medic, boss, userChar, soldier):
             print("Soldier looses ", {boss["Attack Ladder Fold"]}, " HP!")
             print()
 
-            # Checks to see if character is dead from attack
+            # Checks to see if the character is dead from an attack
             if soldier["Health"] <= 0:
                 soldier["Status"] = "Dead"
                 return soldier["Status"]
@@ -541,7 +541,7 @@ def bossLadderTurn(medic, boss, userChar, soldier):
             print("The ladder folds and falls on top of ", userChar["Name"])
             print({userChar["Name"]}, " looses ", {boss["Attack Ladder Fold"]}, " HP!")
             print()
-            # Checks to see if character is dead from attack
+            # Checks to see if the character is dead from an attack
             if userChar["Health"] <= 0:
                 userChar["Status"] = "Dead"
                 return userChar["Status"]
@@ -551,7 +551,7 @@ def bossLadderTurn(medic, boss, userChar, soldier):
             medic["Health"] -= boss["Attack Ladder Fold"]
             print("The ladder folds and falls on top of the Medic")
             print("Medic looses ", {boss["Attack Ladder Fold"]}, " HP!")
-            # Checks to see if character is dead from attack
+            # Checks to see if the character is dead from an attack
             if medic["Health"] <= 0:
                 medic["Status"] = "Dead"
                 return medic["Status"]
@@ -564,7 +564,7 @@ def bossLadderTurn(medic, boss, userChar, soldier):
             print("Soldier tried to pick up the ladder without gloves and jammed their finger.")
             print("Soldier looses ", {boss["Attack Finger Jam"]}, " HP!")
             print()
-            # Checks to see if character is dead from attack
+            # Checks to see if the character is dead from an attack
             if soldier["Health"] <= 0:
                 soldier["Status"] = "Dead"
                 return soldier["Status"]
@@ -575,7 +575,7 @@ def bossLadderTurn(medic, boss, userChar, soldier):
             print(userChar["Name"], " tried to pick up the ladder without gloves and jammed their finger.")
             print({userChar["Name"]}, " looses ", {boss["Attack Finger Jam"]}, " HP!")
             print()
-            # Checks to see if character is dead from attack
+            # Checks to see if the character is dead from an attack
             if userChar["Health"] <= 0:
                 userChar["Status"] = "Dead"
                 return userChar["Status"]
@@ -586,7 +586,7 @@ def bossLadderTurn(medic, boss, userChar, soldier):
             print("Medic tried to pick up the ladder without gloves and jammed their finger.")
             print("Medic looses ", {boss["Attack Finger Jam"]}, " HP!")
             print()
-            # Checks to see if character is dead from attack
+            # Checks to see if the character is dead from an attack
             if medic["Health"] <= 0:
                 medic["Status"] = "Dead"
                 return medic["Status"]
@@ -677,9 +677,9 @@ def main():
     userCurrentChar = classAttributes(userClass)
     
     #  Class select decision statements  #
-    # --- For the user to get information and return to class select --- #
+    # --- For the user to get information and return to class, select --- #
     if userClass >= 4 and userClass <= 6:
-        # Retrieves and displays class information from attributes function
+        # Retrieves and displays class information from the attributes function
         classReturn = input("\nReturn to class select? (y/n): ")
         if classReturn == "y":
             # Allows the user to select their class or view more information. 
@@ -690,7 +690,7 @@ def main():
             print("Oh. Well bye then.")
             return 
     elif userClass == 0:
-        # End's the program, prints a goodbye message.
+        # Ends the program, prints a goodbye message.
         farewellStatement()
         return
 
@@ -713,11 +713,11 @@ def main():
 
         if (boss["Status"] == "Alive") and ((userCurrentChar["Status"] == "Dead") and (medic["Status"] == "Dead") and (soldier["Status"] == "Dead")):
             failureStatement() # Fail Statement if the team is fully defeated
-            userClass = -1 # Exit's the loop
+            userClass = -1 # Exits the loop
 
         if (boss["Status"] == "Dead") and ((userCurrentChar["Status"] == "Alive") or (medic["Status"] == "Alive") or (soldier["Status"] == "Alive")):
             victoryStatement(boss)  # Victory Statement if the boss if defeated
-            userClass = 777 # Exit's the loop
+            userClass = 777 # Exits the loop
 
     #           Game Ends              #
     # -------------------------------- #
